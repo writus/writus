@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
+    {{ head }}
+    
+    <!-- Bootstrap -->
+    
+    <link rel="stylesheet" href="{{ themepath }}css/base.css">
+    <link rel="stylesheet" href="{{ themepath }}css/skeleton.css">
+    <link rel="stylesheet" href="{{ themepath }}css/layout.css">
+    <link rel="stylesheet" href="{{ themepath }}css/reset.css">
+    <link rel="stylesheet" href="{{ themepath }}css/typeplate.css">
+    <link rel="stylesheet" href="{{ themepath }}css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic&subset=latin,greek' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <header id="header">
+        <div class="container inner">
+            <div class="six columns">
+                <h1><a href="/">
+                    {% if blog.ts.logo.url %}
+                    <img src="{{  blog.ts.logo.url }}" alt="{{ blog.name }}">
+                    {% else %}
+                    {{ blog.name }}
+                    {% endif%}
+                </a></h1>
+            </div>
+            <nav id="menu" class="ten columns">
+        
+                <ul class="hide">
+                    
+                    <li><a {{ isHome() ? 'class="active"' }} href="/">Home</a></li>
+                    <li><a {{ isAbout() ? 'class="active"' }} href="/about">About</a></li>
+                    <li><a {{ isArchive() ? 'class="active"' }}href="/archive">Archive</a></li>
+                    <li><a {{ isArchive() ? 'class="active"' }}href="/feed">RSS</a></li>
+                </ul>
+                <a class="navicon">&#9776; Menu</a>
+            </nav>
+        </div>
+    </header>
+  
+    <section id="main" class="container">
+        <section id="content" class="eleven columns">
+            {% block content %}
+            {% endblock %}
+        </section>
+        <aside  class="four columns offset-by-one">
+            <h2>Categories</h2>
+            <ul class="menu">
+                {% for category in categories %}
+                <li><a {{ isCat(category) ? 'class="active"' }} href="/{{ category.url }}">{{ category.name }}</a></li>
+                {% endfor %}
+            </ul>
+            <h2>Links</h2>
+            <ul class="menu">
+                {% for link in blog.links %}
+                <li><a href="{{ link.link }}">{{ link.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </aside>
+    </section>
+
+    <br class="clear" />
+    
+    <footer  class="container" id="footer">
+        &copy; Powered by <a href="http://writus.com">Writus</a>
+    </footer>
+
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        $('.navicon').click(function(){
+            $('#menu ul').toggleClass('hide');
+        });
+    </script>
+
+  </body>
+</html>

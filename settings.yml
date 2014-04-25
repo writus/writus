@@ -1,0 +1,9 @@
+logo:
+    label: Logo image
+    type: file
+    name: logo
+    width: 200
+    height: 28
+    description: For better results use an image with height of 28px
+   
+

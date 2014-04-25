@@ -1,0 +1,20 @@
+{% extends 'writus.layout.twig' %}
+
+{% block content %}
+
+    <article id="post-{{ post.id }}">
+        <header class="post-header">
+            <h3 class="post-title"><a href="/{{post.url}}">{{post.title}}</a></h3>
+            <p class="post-time"><time datetime="{{post.date|date('Y-m-d')}}">{{post.date|date('d M Y')}}</time></p>
+        </header>
+        
+        <section class="post-content">
+           <p>{{ post.body }}</p>
+        </section>
+        
+       
+    </article>
+
+
+{% endblock %}   
+

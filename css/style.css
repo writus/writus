@@ -1,0 +1,124 @@
+body{font-family: 'Ubuntu', 'sans-serif';}
+a, a:visited {
+    text-decoration: none;
+    color: #008CBA;
+  transition: color .40s ease-in;
+   -moz-transition: color .40s ease-in;
+   -webkit-transition: color .40s ease-in;
+}
+a:hover{color: #E043A1!important;}
+
+#header {
+  background: none repeat scroll 0 0 #415463;
+  width: 100%;
+  z-index: 999;
+}
+#header .inner{position:relative}
+#header h1 {
+  font-size: 44px;
+  line-height: 58px;
+  margin: 0;
+}
+#header h1 a{color:#D7D7D7;}
+
+#menu {
+ 
+}
+#menu ul{ position: absolute;
+  right: 10px;
+  top: 0;}
+#menu li{display: inline-block;}
+#menu li a {
+  color: #D7D7D7;
+  display: inline-block;
+  font-size: 21px;
+  line-height: 55px;
+  padding: 0 15px;
+}
+#menu li a:hover{}
+
+h2.index-title{ color: #686868;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 50px 0 10px;}
+article h3 {
+  color: #222222;
+  margin-bottom: 2px;
+  margin-top: 50px;
+}
+article h3 a,article h3 a:visited {color: #222222;}
+article .post-time {
+  color: #777777;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 20px;
+}
+article .post-excerpt {
+  color: #222222;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.text-left{float:left;margin-top: 40px;}
+.text-right{float:right;margin-top: 40px;}
+
+footer#footer {
+  border-top: 1px solid #D7D7D7;
+  clear: both;
+  font-size: 12px;
+  margin-top: 50px;
+  padding: 15px 0 50px;
+  text-align: center;
+}
+
+aside {
+  margin-top: 50px;
+}
+aside h2{   color: #686868;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 10px;}
+aside .menu {
+  margin-bottom: 35px;
+}
+aside .menu li {
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 5px;
+}
+#menu .navicon {  
+      display:none;
+    }  
+@media screen and (max-width: 600px) {  
+    
+    
+  #menu ul {
+    position:static;
+    margin: 0;
+    padding: 0;
+  }
+
+  #menu ul.hide {
+      display:none;
+  }
+
+
+  #menu li a {
+    color: #D7D7D7;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 39px;
+    padding: 0 10px;
+  }
+   #menu .navicon {
+    color: #D7D7D7;
+    display: inline-block;
+    font-size: 21px;
+    line-height: 55px;
+    padding: 0 15px;
+    cursor:pointer;
+    position: absolute;
+    right: 0;
+    top: 5px;
+  }
+}  
