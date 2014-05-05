@@ -51,7 +51,7 @@ article .post-time {
   color: #777777;
   font-size: 14px;
   line-height: 18px;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
 }
 article .post-excerpt {
   color: #222222;
@@ -74,12 +74,16 @@ footer#footer {
 aside {
   margin-top: 50px;
 }
-aside h2{   color: #686868;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0 0 10px;}
+aside h2 {
+  color: #686868;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 23px;
+  margin: 0 0 10px;
+  padding: 0;
+}
 aside .menu {
-  margin-bottom: 35px;
+  margin: 0 0 35px;
 }
 aside .menu li {
   font-size: 14px;
